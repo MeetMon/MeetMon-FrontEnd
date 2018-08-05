@@ -1,9 +1,13 @@
 <template>
-  <div class="card">
+  <md-card md-with-hover>
     <img :src="image">
-    <h1>{{title}}</h1>
-    <h2>{{description}}</h2>
-  </div>
+    <md-card-header>
+      <h1 class="md-title">{{title}}</h1>
+    </md-card-header>
+    <md-card-content>
+      <h2 class="md-subhead">{{description}}</h2>
+    </md-card-content>
+  </md-card>
 </template>
 
 <script>
@@ -14,5 +18,4 @@ export default {
 </script>
 
 <style>
-
 </style>
