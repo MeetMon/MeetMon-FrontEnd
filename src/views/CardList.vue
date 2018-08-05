@@ -33,5 +33,7 @@ export default {
 </script>
 
 <style>
-
+card{
+  padding: 40% 40%;
+}
 </style>

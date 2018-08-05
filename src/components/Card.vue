@@ -1,5 +1,5 @@
 <template>
-  <md-card md-with-hover>
+  <md-card md-with-hover class="card">
     <img :src="image">
     <md-card-header>
       <h1 class="md-title">{{title}}</h1>
@@ -18,4 +18,9 @@ export default {
 </script>
 
 <style>
+.card{
+  margin:20px;
+  width: 300px;
+  display: inline-block;
+}
 </style>
