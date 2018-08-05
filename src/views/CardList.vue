@@ -3,9 +3,9 @@
     <div v-if="res">
       <card
         v-for="res in res.body"
-        v-bind:key="res._id.$oid"
+        v-bind:key="res._id"
         v-bind:title="res.title"
-        v-bind:description="res.description"
+        v-bind:description="res.timestamp"
       />
     </div>
   </api-request>
