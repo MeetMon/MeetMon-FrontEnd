@@ -1,0 +1,24 @@
+{
+  "name": "meetmon-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-api-request": "^1.1.7",
+    "vue-material": "^1.0.0-beta-10.2",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.10",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
+    "@vue/cli-service": "^3.0.0-rc.10",
+    "@vue/eslint-config-airbnb": "^3.0.0-rc.10",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
