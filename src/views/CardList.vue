@@ -3,7 +3,7 @@
     <div v-if="res">
       <card
         v-for="res in res.body"
-        v-bind:key="res.id"
+        v-bind:key="res._id.$oid"
         v-bind:title="res.title"
         v-bind:description="res.description"
       />
