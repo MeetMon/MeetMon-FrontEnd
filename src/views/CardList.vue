@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     req() {
-      return this.$http.get('http://bd5ad73d.ngrok.io/event');
+      return this.$http.get('http://localhost:5000/event');
     },
   },
 
