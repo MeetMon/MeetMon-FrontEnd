@@ -1,6 +1,7 @@
 <template>
   <api-request :resource="req" v-model="res">
     <div v-if="res">
+      <morphing-button />
       <card
         v-for="res in res.body"
         v-bind:key="res._id"
@@ -12,11 +13,13 @@
 </template>
 
 <script>
+import MorphingButton from '@/components/MorphingButton.vue';
 import Card from '@/components/Card.vue';
 
 export default {
   components: {
     Card,
+    MorphingButton,
   },
   data() {
     return {
