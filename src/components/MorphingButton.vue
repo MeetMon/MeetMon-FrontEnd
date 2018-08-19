@@ -1,6 +1,6 @@
 <template>
   <div class="add-product" :class="{'open': formOpen}">
-    <div class="button-copy" v-show="!formOpen" @click="formOpen = true">Add Product</div>
+    <div class="button-copy" v-show="!formOpen" @click="formOpen = true">New Post</div>
     <div v-show="formOpen" class="form">
       <entry-form/>
       <div class="cancel"><span @click="cancel()">Cancel</span></div>
@@ -12,6 +12,7 @@
 import EntryForm from '@/components/EntryForm.vue';
 
 export default {
+  name: 'MorphingButton',
   components: {
     EntryForm,
   },

@@ -3,9 +3,11 @@
     <div id="nav">
       <router-link to="/">Home</router-link>
     </div>
+    <morphing-button />
     <router-view/>
   </div>
 </template>
+
 
 <style>
 #app {
