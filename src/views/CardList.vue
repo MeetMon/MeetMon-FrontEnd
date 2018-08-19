@@ -3,7 +3,7 @@
     <morphing-button/>
     <div v-if="res">
       <card
-        v-for="res in res.body"
+        v-for="res in res.data"
         v-bind:key="res._id"
         v-bind:title="res.title"
         v-bind:description="res.timestamp"

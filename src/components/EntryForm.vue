@@ -26,9 +26,13 @@ export default {
     submit() {
       this.$validator.validateAll().then((result) => {
         if (result) {
-          const formData = new FormData();
-          formData.append('title', this.title);
-          formData.append('description', this.description);
+          const formData = { title: this.title, description: this.description };
+          this.$http.post('http://localhost:5000/event', formData, { emulateJSON: true })
+            .then((response) => {
+              vm.$forceUpdate();
+            }, (response) => {
+              alert(response.status);
+            });
         }
       });
     },

@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import VueResource from 'vue-resource';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 import VueApiRequest from 'vue-api-request';
 import VueMaterial from 'vue-material';
 import 'vue-material/dist/vue-material.min.css';
@@ -8,10 +9,9 @@ import VeeValidate from 'vee-validate';
 import App from './App.vue';
 import router from './router';
 
-
 Vue.config.productionTip = false;
 
-Vue.use(VueResource);
+Vue.use(VueAxios, axios);
 Vue.use(VueApiRequest);
 Vue.use(VueMaterial);
 Vue.use(VeeValidate);
