@@ -8,14 +8,14 @@
       <h2 class="md-subhead">{{description}}</h2>
     </md-card-content>
     <vue-star animate="animated bounceIn" color="#F05654">
-      <img slot="icon" src="../assets/like.png" />
+      <img slot="icon" src="../assets/dab.png" />
 
     </vue-star>
-    <span style="text-align:justify">DABBIE : </span>
+    <!--<span style="text-align:justify">DABBIE : </span> -->
     <vue-star animate="animated bounceIn" color="#2d41d8" style="right: 0px">
-      <img slot="icon" src="../assets/dislike.png" />
+      <img slot="icon" src="../assets/wtf.png" />
     </vue-star>
-    <span > WUT? : </span>
+    <!-- <span > WUT? : </span> -->
   </md-card>
 </template>
 
