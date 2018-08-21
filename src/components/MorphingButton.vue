@@ -1,11 +1,13 @@
 <template>
-  <div class="add-product" :class="{'open': formOpen}">
+  <div class = "center">
+  <div class="add-product " :class="{'open': formOpen}">
     <div class="button-copy" v-show="!formOpen" @click="formOpen = true">Yeet</div>
     <div v-show="formOpen" class="form">
       <entry-form/>
       <div class="cancel"><span @click="cancel()">Cancel</span></div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -102,4 +104,11 @@ export default {
     cursor: pointer;
   }
 }
+
+.center {
+  line-height: 1.5;
+     display: inline-block;
+     vertical-align: middle;
+}
+
 </style>

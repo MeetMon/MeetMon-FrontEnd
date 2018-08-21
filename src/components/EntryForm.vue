@@ -1,4 +1,5 @@
 <template>
+  <div >
   <form @submit.prevent="submit">
     <vue-transmit class="col-12"
                   tag="section"
@@ -8,7 +9,7 @@
                   upload-area-classes="bg-faded"
                   ref="uploader">
       <div class="d-flex align-items-center justify-content-center w-100"
-            style="height:50vh; border-radius: 1rem;">
+            style="height:10vh; border-radius: 1rem; position">
         <button class="btn btn-primary"
                 @click="triggerBrowse">Upload Files
         </button>
@@ -26,6 +27,7 @@
       Add new Entry
     </md-button>
   </form  >
+</div>
 </template>
 
 <script>
