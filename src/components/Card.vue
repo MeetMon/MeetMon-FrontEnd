@@ -7,18 +7,20 @@
     <md-card-content>
       <h2 class="md-subhead">{{description}}</h2>
     </md-card-content>
-    <VueEmoji @input="onInput" :value="myText" width="100px" height="50px" />
     <vue-star animate="animated bounceIn" color="#F05654">
       <img slot="icon" src="../assets/like.png" />
+
     </vue-star>
-    <vue-star animate="animated rubberBand" color="#F05654">
-    <a slot="icon" class="fa fa-heart" @click="handleClick"></a>
-  </vue-star>
+    <span style="text-align:justify">DABBIE : </span>
+    <vue-star animate="animated bounceIn" color="#2d41d8" style="right: 0px">
+      <img slot="icon" src="../assets/dislike.png" />
+    </vue-star>
+    <span > WUT? : </span>
   </md-card>
 </template>
 
 <script>
-import VueEmoji from 'emoji-vue';
+
 import VueStar from 'vue-star'
 
 
@@ -32,7 +34,6 @@ export default {
    },
       },
   components: {
-           VueEmoji,
            VueStar
          },
   name: 'card',
@@ -43,7 +44,7 @@ export default {
 
 <style>
 .card{
-  margin:20px;
+  margin:60px;
   width: 300px;
   display: inline-block;
 }
