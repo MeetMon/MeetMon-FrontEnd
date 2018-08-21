@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "emoji-mart-vue": "^2.6.4",
+    "emoji-vue": "^0.2.3",
     "node-sass": "^4.9.3",
+    "postcss-import": "^12.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
     "vee-validate": "^2.1.0-beta.7",
