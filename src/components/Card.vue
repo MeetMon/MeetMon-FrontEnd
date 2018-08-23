@@ -8,14 +8,15 @@
       <h2 class="md-subhead">{{description}}</h2>
     </md-card-content>
     <vue-star animate="animated bounceIn" color="#F05654">
-      <img slot="icon" src="../assets/dab.png" />
+      <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
 
     </vue-star>
-    <!--<span style="text-align:justify">DABBIE : </span> -->
     <vue-star animate="animated bounceIn" color="#2d41d8" style="right: 0px">
-      <img slot="icon" src="../assets/wtf.png" />
+      <img @click="incrementno" slot="icon" src="../assets/wtf.png" />
     </vue-star>
-    <!-- <span > WUT? : </span> -->
+  <span class="text-right" > WUT?:  <span>{{no}}</span> </span>
+  <span class="text-left"> YAS:   <span>{{yes}}</span></span>
+
   </md-card>
 </template>
 
@@ -29,23 +30,50 @@ export default {
     onInput(event) {
             //event.data contains the value of the textarea
         },
-        handleClick () {
-     //do something
-   },
+        incrementyes() {
+        this.yes++;
       },
+      incrementno() {
+      this.no++;
+    },
+
+  },
   components: {
            VueStar
          },
+  data(){
+    return{
+      yes:0,
+      no:0
+    }
+  },
   name: 'card',
   props: ['image', 'title', 'description'],
+  computed: {
+    isDisabled(){
+      return true;
+    }
+  }
 };
 
 </script>
 
 <style>
 .card{
-  margin:60px;
+  margin:20px;
   width: 300px;
+  height:250px;
   display: inline-block;
+}
+
+.text-right{
+  position: absolute;
+     bottom: 0;
+     right: 50px;
+   }
+.text-left{
+  position: absolute;
+     bottom: 0;
+     left: 27px;
 }
 </style>

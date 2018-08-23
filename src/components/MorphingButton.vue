@@ -1,7 +1,7 @@
 <template>
   <div class = "center">
   <div class="add-product " :class="{'open': formOpen}">
-    <div class="button-copy" v-show="!formOpen" @click="formOpen = true">#Yeet</div>
+    <div class="button-copy" v-show="!formOpen" @click="formOpen = true">Yeet</div>
     <div v-show="formOpen" class="form">
       <entry-form/>
       <div class="cancel"><span @click="cancel()">Cancel</span></div>
@@ -37,8 +37,8 @@ export default {
     background-color: #FAFAFA;
     padding: 18px 32px;
     border-radius: 5px;
-    width: 420px;
-    height: 398px;
+    width: 300px;
+    height: 500px;
     cursor: default;
     form {
       opacity: 1;

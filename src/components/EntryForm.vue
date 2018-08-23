@@ -16,15 +16,12 @@
       </div>
     </vue-transmit>
     <md-field>
-      <label>Title</label>
+      <label>put some swag on yoh title</label>
       <md-input v-validate="'required'" v-model="title" data-vv-name="title" required/>
     </md-field>
-    <md-field>
-      <label>Description</label>
-      <md-textarea v-model="description"/>
-    </md-field>
+
     <md-button class="md-raised md-primary" type="submit">
-      Add new Entry
+      YEEET
     </md-button>
   </form  >
 </div>
@@ -35,7 +32,6 @@ export default {
   data() {
     return {
       title: null,
-      description: null,
       filename: null,
       uploaderOptions: {
         acceptedFileTypes: ['image/*'],
@@ -53,7 +49,7 @@ export default {
         if (result) {
           const formData = new FormData();
           formData.set('title', this.title);
-          formData.set('description', this.description);
+
           formData.set('filename',this.$refs.uploader.files[0].name);
           this.$http.post('http://localhost:5000/event', formData).then((response) => { window.location.reload(true) });
         }
