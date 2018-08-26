@@ -45,12 +45,12 @@ export default {
     req() {
       return this.$http.get('http://localhost:5000/event');
     },
-    timer_req(){
+    timer_req() {
       return this.$http.get('http://localhost:5000/explode');
     },
-    reload(){
+    reload() {
       window.location.reload(true);
-    }
+    },
   },
 
 };
