@@ -1,24 +1,22 @@
 <template>
-  <md-card md-with-hover class="card">
-    <md-card-header>
-    <md-card-media>
-    <img :src="image">
-    </md-card-media>
-    <md-card-header-text>
-      <h1 class="md-title">{{title}}</h1>
-    </md-card-header-text>
-    </md-card-header>
-    <vue-star animate="animated bounceIn" color="#F05654">
-      <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
+  <md-card>
+      <md-card-media>
+        <img :src="image">
+      </md-card-media>
 
-    </vue-star>
-    <vue-star animate="animated bounceIn" color="#2d41d8" style="right: 0px">
+      <md-card-header>
+        <div class="md-title"> <h1 class="md-title">{{title}}</h1></div>
+
+      </md-card-header>
+
+      <vue-star animate="animated bounceIn" color="#F05654" style = "bottom:20px;left:20px;">
+    <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
+
+  </vue-star>
+  <vue-star animate="animated bounceIn" color="#2d41d8" style="right: 30px;bottom:27px;">
       <img @click="incrementno" slot="icon" src="../assets/wtf.png" />
     </vue-star>
-  <span class="text-right" > WUT?:  <span>{{no}}</span> </span>
-  <span class="text-left"> YAS:   <span>{{yes}}</span></span>
-
-  </md-card>
+    </md-card>
 </template>
 
 <script>
@@ -77,4 +75,12 @@ export default {
      bottom: 0;
      left: 27px;
 }
+
+.md-card {
+    width: 320px;
+    margin: 20px;
+    height:520px;
+    display: inline-block;
+    vertical-align: top;
+  }
 </style>
