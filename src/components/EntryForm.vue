@@ -14,6 +14,14 @@
                 @click="triggerBrowse">Upload Files
         </button>
       </div>
+      <template slot="files" slot-scope="props">
+            <div v-for="(file, i) in props.files" :key="file.id" :class="{'mt-5': i === 0}">
+              <div class="media">
+                <img :src="file.dataUrl" class="img-fluid d-flex mr-3">
+
+              </div>
+            </div>
+          </template>
     </vue-transmit>
     <md-field>
       <label>put some swag on yoh title</label>
