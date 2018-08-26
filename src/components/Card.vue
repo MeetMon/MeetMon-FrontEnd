@@ -9,14 +9,22 @@
 
       </md-card-header>
 
+
       <vue-star animate="animated bounceIn" color="#F05654" style = "bottom:20px;left:20px;">
     <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
 
   </vue-star>
-  <vue-star animate="animated bounceIn" color="#2d41d8" style="right: 30px;bottom:27px;">
+
+
+
+  <vue-star  animate="animated bounceIn" color="#2d41d8" style="right: 30px;bottom:27px;">
       <img @click="incrementno" slot="icon" src="../assets/wtf.png" />
     </vue-star>
-    </md-card>
+
+<span class="text-right" > WUT?:  <span>{{no}}</span> </span>
+<span class="text-left"> YAS:   <span>{{yes}}</span></span>
+
+</md-card>
 </template>
 
 <script>
@@ -30,12 +38,15 @@ export default {
       // event.data contains the value of the textarea
     },
     incrementyes() {
+
       this.yes++;
     },
     incrementno() {
       this.no++;
     },
-
+    disablebutton(){
+      test:true;
+    },
   },
   components: {
     VueStar,
@@ -44,6 +55,8 @@ export default {
     return {
       yes: 0,
       no: 0,
+
+
     };
   },
   name: 'card',
@@ -73,7 +86,7 @@ export default {
 .text-left{
   position: absolute;
      bottom: 0;
-     left: 27px;
+     left: 45px;
 }
 
 .md-card {

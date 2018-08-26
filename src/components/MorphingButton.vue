@@ -40,7 +40,7 @@ export default {
     padding: 18px 32px;
     border-radius: 5px;
     width: 300px;
-    height: 500px;
+    height: 600px;
     cursor: default;
     form {
       opacity: 1;
