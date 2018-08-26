@@ -8,7 +8,7 @@
           <vue-countdown v-on:time-expire="reload" :seconds="timer_response.data.time" class="countdown"/>
         </div>
       </api-request>
-      <div v-if="res" style="margin-top:50px; ">
+        <div v-if="res" style="margin-top:50px; ">
           <div v-if="res.data.length == 0" style="margin:0 auto;"  >
             <img src="../assets/arrow-up-6-xxl.png"  >
           </div>
@@ -18,6 +18,9 @@
           v-bind:title="res.title"
           v-bind:image="res.image"
           v-bind:description="res.timestamp"
+          v-bind:id="res._id"
+          v-bind:upvote="res.upvotes"
+          v-bind:downvote="res.downvotes"
         />
       </div>
     </api-request>

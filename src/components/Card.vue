@@ -10,19 +10,19 @@
       </md-card-header>
 
 
-      <vue-star animate="animated bounceIn" color="#F05654" style = "bottom:20px;left:20px;">
+      <vue-star animate="animated bounceIn " color="#F05654" style = "bottom:20px;left:20px;">
     <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
 
   </vue-star>
 
 
 
-  <vue-star  animate="animated bounceIn" color="#2d41d8" style="right: 30px;bottom:27px;">
+  <vue-star  animate="animated wobble" colonor="#2d41d8" style="right: 30px;bottom:27px;">
       <img @click="incrementno" slot="icon" src="../assets/wtf.png" />
     </vue-star>
 
-<span class="text-right" > WUT?:  <span>{{no}}</span> </span>
-<span class="text-left"> YAS:   <span>{{yes}}</span></span>
+<span class="text-right" > WUT?:  <span>{{downvote}}</span> </span>
+<span class="text-left"> YAS:   <span>{{upvote}}</span></span>
 
 </md-card>
 </template>
@@ -38,11 +38,15 @@ export default {
       // event.data contains the value of the textarea
     },
     incrementyes() {
-
-      this.yes++;
+      let string = 'http://localhost:5000/vote/up/' + this.id
+        this.upvote++
+return this.$http.get(string);
     },
     incrementno() {
-      this.no++;
+    let string = 'http://localhost:5000/vote/down/' + this.id
+    this.downvote++
+
+return this.$http.get(string);
     },
     disablebutton(){
       test:true;
@@ -60,7 +64,7 @@ export default {
     };
   },
   name: 'card',
-  props: ['image', 'title', 'description'],
+  props: ['image', 'title', 'description','id','upvote','downvote'],
   computed: {
     isDisabled() {
       return true;
