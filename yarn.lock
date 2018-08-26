@@ -634,6 +634,12 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
+"@dmaksimovic/vue-countdown@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@dmaksimovic/vue-countdown/-/vue-countdown-1.0.0.tgz#19dfd0c722938749ca8757b5f59869b11a839a2d"
+  dependencies:
+    easytimer "^1.1.1"
+
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@intervolga/optimize-cssnano-plugin/-/optimize-cssnano-plugin-1.0.6.tgz#be7c7846128b88f6a9b1d1261a0ad06eb5c0fdf8"
@@ -2452,6 +2458,10 @@ duplexify@^3.4.2, duplexify@^3.6.0:
 easy-stack@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/easy-stack/-/easy-stack-1.0.0.tgz#12c91b3085a37f0baa336e9486eac4bf94e3e788"
+
+easytimer@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/easytimer/-/easytimer-1.1.1.tgz#1addde725646de2592430d03048a748d63354e94"
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
