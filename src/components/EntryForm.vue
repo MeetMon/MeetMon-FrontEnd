@@ -51,6 +51,8 @@ export default {
           formData.set('title', this.title);
           if(this.$refs.uploader.files[0].name != undefined){
             formData.set('filename', this.$refs.uploader.files[0].name);
+          } else{
+            formData.set('filename','no_image.png');
           }
           this.$http.post('http://localhost:5000/event', formData).then((response) => { window.location.reload(true); });
         }
