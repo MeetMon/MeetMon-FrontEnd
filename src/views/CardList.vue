@@ -6,6 +6,7 @@
         v-for="res in res.data"
         v-bind:key="res._id"
         v-bind:title="res.title"
+        v-bind:image="res.image"
         v-bind:description="res.timestamp"
       />
     </div>
