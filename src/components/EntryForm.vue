@@ -49,9 +49,12 @@ export default {
         if (result) {
           const formData = new FormData();
           formData.set('title', this.title);
-
-          formData.set('filename',this.$refs.uploader.files[0].name);
-          this.$http.post('http://localhost:5000/event', formData).then((response) => { window.location.reload(true) });
+          if(this.$refs.uploader.files[0].name != undefined){
+            formData.set('filename', this.$refs.uploader.files[0].name);
+          } else{
+            formData.set('filename','no_image.png');
+          }
+          this.$http.post('http://localhost:5000/event', formData).then((response) => { window.location.reload(true); });
         }
       });
     },

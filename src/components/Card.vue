@@ -1,12 +1,13 @@
 <template>
   <md-card md-with-hover class="card">
-    <img :src="image">
     <md-card-header>
+    <md-card-media>
+    <img :src="image">
+    </md-card-media>
+    <md-card-header-text>
       <h1 class="md-title">{{title}}</h1>
+    </md-card-header-text>
     </md-card-header>
-    <md-card-content>
-      <h2 class="md-subhead">{{description}}</h2>
-    </md-card-content>
     <vue-star animate="animated bounceIn" color="#F05654">
       <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
 
@@ -22,38 +23,38 @@
 
 <script>
 
-import VueStar from 'vue-star'
+import VueStar from 'vue-star';
 
 
 export default {
   methods: {
     onInput(event) {
-            //event.data contains the value of the textarea
-        },
-        incrementyes() {
-        this.yes++;
-      },
-      incrementno() {
+      // event.data contains the value of the textarea
+    },
+    incrementyes() {
+      this.yes++;
+    },
+    incrementno() {
       this.no++;
     },
 
   },
   components: {
-           VueStar
-         },
-  data(){
-    return{
-      yes:0,
-      no:0
-    }
+    VueStar,
+  },
+  data() {
+    return {
+      yes: 0,
+      no: 0,
+    };
   },
   name: 'card',
   props: ['image', 'title', 'description'],
   computed: {
-    isDisabled(){
+    isDisabled() {
       return true;
-    }
-  }
+    },
+  },
 };
 
 </script>
