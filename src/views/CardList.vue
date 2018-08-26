@@ -1,9 +1,10 @@
 <template>
   <api-request :resource="req" v-model="res">
     <morphing-button/>
-    <div v-if="res" style="position:absolute; margin-top:50px; ">
-      <div v-if="res.data.length == 0">
-        There is nothing to show here
+
+    <div v-if="res" style="margin-top:50px; ">
+      <div v-if="res.data.length == 0" style="margin:0 auto;"  >
+        <img src="../assets/arrow-up-6-xxl.png"  >
       </div>
       <card
         v-for="res in res.data"
