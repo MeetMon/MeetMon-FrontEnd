@@ -49,7 +49,7 @@ export default {
         if (result) {
           const formData = new FormData();
           formData.set('title', this.title);
-          if(this.$refs.uploader.files[0].name){
+          if(this.$refs.uploader.files.length > 0){
             formData.set('filename', this.$refs.uploader.files[0].name);
           } else{
             formData.set('filename','no_image.png');
