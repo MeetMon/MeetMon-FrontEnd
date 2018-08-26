@@ -50,8 +50,8 @@ export default {
           const formData = new FormData();
           formData.set('title', this.title);
 
-          formData.set('filename',this.$refs.uploader.files[0].name);
-          this.$http.post('http://localhost:5000/event', formData).then((response) => { window.location.reload(true) });
+          formData.set('filename', this.$refs.uploader.files[0].name);
+          this.$http.post('http://localhost:5000/event', formData).then((response) => { window.location.reload(true); });
         }
       });
     },

@@ -22,38 +22,38 @@
 
 <script>
 
-import VueStar from 'vue-star'
+import VueStar from 'vue-star';
 
 
 export default {
   methods: {
     onInput(event) {
-            //event.data contains the value of the textarea
-        },
-        incrementyes() {
-        this.yes++;
-      },
-      incrementno() {
+      // event.data contains the value of the textarea
+    },
+    incrementyes() {
+      this.yes++;
+    },
+    incrementno() {
       this.no++;
     },
 
   },
   components: {
-           VueStar
-         },
-  data(){
-    return{
-      yes:0,
-      no:0
-    }
+    VueStar,
+  },
+  data() {
+    return {
+      yes: 0,
+      no: 0,
+    };
   },
   name: 'card',
   props: ['image', 'title', 'description'],
   computed: {
-    isDisabled(){
+    isDisabled() {
       return true;
-    }
-  }
+    },
+  },
 };
 
 </script>

@@ -18,7 +18,7 @@ Vue.use(VueMaterial);
 Vue.use(VueTransmit);
 Vue.use(VeeValidate);
 
-var vm = new Vue({
+const vm = new Vue({
   router,
   render: h => h(App),
 }).$mount('#app');
