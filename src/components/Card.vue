@@ -1,11 +1,13 @@
 <template>
   <md-card md-with-hover class="card">
+    <md-card-header>
     <md-card-media>
     <img :src="image">
     </md-card-media>
     <md-card-header-text>
       <h1 class="md-title">{{title}}</h1>
     </md-card-header-text>
+    </md-card-header>
     <vue-star animate="animated bounceIn" color="#F05654">
       <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
 
