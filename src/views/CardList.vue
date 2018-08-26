@@ -8,9 +8,10 @@
           <vue-countdown v-on:time-expire="reload" :seconds="timer_response.data.time" class="countdown"/>
         </div>
       </api-request>
-        <div v-if="res" style="margin-top:50px; ">
+      <div v-if="res" style="margin-top:50px; ">
           <div v-if="res.data.length == 0" style="margin:0 auto;"  >
             <img src="../assets/arrow-up-6-xxl.png"  >
+          </div>
         <card
           v-for="res in res.data"
           v-bind:key="res._id"
