@@ -28,7 +28,7 @@
       <md-input v-validate="'required'" v-model="title" data-vv-name="title" required/>
     </md-field>
 
-    <md-button class="md-raised md-primary" type="submit">
+    <md-button class="md-primary md-raised" @click.native="submit()">
       YEEET
     </md-button>
   </form  >
@@ -55,14 +55,14 @@ export default {
     submit() {
       this.$validator.validateAll().then((result) => {
         if (result) {
-          const formData = new FormData();
-          formData.set('title', this.title);
+          var form = new FormData();
+          form.append('title', this.title);
           if (this.$refs.uploader.files.length > 0) {
-            formData.set('filename', this.$refs.uploader.files[0].name);
+            form.append('filename', this.$refs.uploader.files[0].name);
           } else {
-            formData.set('filename', 'no_image');
+            form.append('filename', 'no_image');
           }
-          this.$http.post('http://4a663bb4.ngrok.io/event', formData).then((response) => { window.location.reload(true); });
+          this.$http.post('http://4a663bb4.ngrok.io/event', form).then((response) => { window.location.reload(true); });
         }
       });
     },
