@@ -46,10 +46,10 @@ export default {
   },
   methods: {
     req() {
-      return this.$http.get('http://localhost:5000/event');
+      return this.$http.get('http://4a663bb4.ngrok.io/event');
     },
     timer_req() {
-      return this.$http.get('http://localhost:5000/explode');
+      return this.$http.get('http://4a663bb4.ngrok.io/explode');
     },
     reload() {
       window.location.reload(true);

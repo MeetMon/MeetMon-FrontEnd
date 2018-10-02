@@ -45,7 +45,7 @@ export default {
         acceptedFileTypes: ['image/*'],
         clickable: false,
         adapterOptions: {
-          url: 'http://localhost:5000/upload',
+          url: 'http://4a663bb4.ngrok.io/upload',
           paramName: 'image',
         },
       },
@@ -62,7 +62,7 @@ export default {
           } else {
             formData.set('filename', 'no_image');
           }
-          this.$http.post('http://localhost:5000/event', formData).then((response) => { window.location.reload(true); });
+          this.$http.post('http://4a663bb4.ngrok.io/event', formData).then((response) => { window.location.reload(true); });
         }
       });
     },
