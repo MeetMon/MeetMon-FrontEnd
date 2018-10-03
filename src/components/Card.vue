@@ -38,12 +38,12 @@ export default {
       // event.data contains the value of the textarea
     },
     incrementyes() {
-      let string = 'http://4a663bb4.ngrok.io/vote/up/' + this.id
+      let string = 'http://198.199.68.6/vote/up/' + this.id
         this.upvote++
 return this.$http.get(string);
     },
     incrementno() {
-    let string = 'http://4a663bb4.ngrok.io/vote/down/' + this.id
+    let string = 'http://198.199.68.6/vote/down/' + this.id
     this.downvote++
 
 return this.$http.get(string);

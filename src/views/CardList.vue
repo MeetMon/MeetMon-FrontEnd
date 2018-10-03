@@ -9,20 +9,17 @@
         </div>
       </api-request>
         <div v-if="res" style="margin-top:50px; ">
-          <div v-if="res.data.length == 0" style="margin:0 auto;"  >
-            <img src="../assets/arrow-up-6-xxl.png"  >
-          </div>
-        <card
-          v-for="res in res.data"
-          v-bind:key="res._id"
-          v-bind:title="res.title"
-          v-bind:image="res.image"
-          v-bind:description="res.timestamp"
-          v-bind:id="res._id"
-          v-bind:upvote="res.upvotes"
-          v-bind:downvote="res.downvotes"
-        />
-      </div>
+          <card
+            v-for="res in res.data"
+            v-bind:key="res._id"
+            v-bind:title="res.title"
+            v-bind:image="res.image"
+            v-bind:description="res.timestamp"
+            v-bind:id="res._id"
+            v-bind:upvote="res.upvotes"
+            v-bind:downvote="res.downvotes"
+          />
+        </div>
     </api-request>
   </div>
 </template>
@@ -46,10 +43,10 @@ export default {
   },
   methods: {
     req() {
-      return this.$http.get('http://4a663bb4.ngrok.io/event');
+      return this.$http.get('http://198.199.68.6/event');
     },
     timer_req() {
-      return this.$http.get('http://4a663bb4.ngrok.io/explode');
+      return this.$http.get('http://198.199.68.6/explode');
     },
     reload() {
       window.location.reload(true);

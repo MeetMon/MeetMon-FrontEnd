@@ -1,7 +1,7 @@
 <template>
   <div >
   <form @submit.prevent="submit">
-    <vue-transmit class="col-12"
+    <vue-transmit class="transmitter"
                   tag="section"
                   v-bind="uploaderOptions"
                   v-bind:url="uploaderOptions.adapterOptions.url"
@@ -45,7 +45,7 @@ export default {
         acceptedFileTypes: ['image/*'],
         clickable: false,
         adapterOptions: {
-          url: 'http://4a663bb4.ngrok.io/upload',
+          url: 'http://198.199.68.6/upload',
           paramName: 'image',
         },
       },
@@ -62,7 +62,7 @@ export default {
           } else {
             form.append('filename', 'no_image');
           }
-          this.$http.post('http://4a663bb4.ngrok.io/event', form).then((response) => { window.location.reload(true); });
+          this.$http.post('http://198.199.68.6/event', form).then((response) => { window.location.reload(true); });
         }
       });
     },

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/"></router-link>
+      <i><b>yeet - stalkerspace reborn</b></i>
     </div>
     <router-view/>
   </div>
