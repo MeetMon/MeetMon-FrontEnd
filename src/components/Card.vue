@@ -8,22 +8,16 @@
         <div class="md-title"> <h1 class="md-title">{{title}}</h1></div>
 
       </md-card-header>
-
-
-      <vue-star animate="animated bounceIn " color="#F05654" style = "bottom:20px;left:20px;">
-    <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
-
-  </vue-star>
-
-
-
-  <vue-star  animate="animated wobble" colonor="#2d41d8" style="right: 30px;bottom:27px;">
-      <img @click="incrementno" slot="icon" src="../assets/wtf.png" />
-    </vue-star>
-
-<span class="text-right" > WUT?:  <span>{{downvote}}</span> </span>
-<span class="text-left"> YAS:   <span>{{upvote}}</span></span>
-
+      <md-card-content>
+        <vue-star animate="animated bounceIn " color="#F05654" style = "bottom:20px;left:20px;">
+          <img @click="incrementyes" :class="{ disabled: isDisabled }" slot="icon" src="../assets/dab.png" />
+        </vue-star>
+        <vue-star  animate="animated wobble" colonor="#2d41d8" style="right: 30px;bottom:27px;">
+          <img @click="incrementno" slot="icon" src="../assets/wtf.png" />
+        </vue-star>
+        <span class="text-right" > WUT?:  <span>{{downvote}}</span> </span>
+        <span class="text-left"> YAS:   <span>{{upvote}}</span></span>
+      </md-card-content>
 </md-card>
 </template>
 
@@ -38,18 +32,18 @@ export default {
       // event.data contains the value of the textarea
     },
     incrementyes() {
-      let string = 'http://198.199.68.6/vote/up/' + this.id
-        this.upvote++
-return this.$http.get(string);
+      const string = `http://198.199.68.6/vote/up/${this.id}`;
+      this.upvote++;
+      return this.$http.get(string);
     },
     incrementno() {
-    let string = 'http://198.199.68.6/vote/down/' + this.id
-    this.downvote++
+      const string = `http://198.199.68.6/vote/down/${this.id}`;
+      this.downvote++;
 
-return this.$http.get(string);
+      return this.$http.get(string);
     },
-    disablebutton(){
-      test:true;
+    disablebutton() {
+      true;
     },
   },
   components: {
@@ -64,7 +58,7 @@ return this.$http.get(string);
     };
   },
   name: 'card',
-  props: ['image', 'title', 'description','id','upvote','downvote'],
+  props: ['image', 'title', 'description', 'id', 'upvote', 'downvote'],
   computed: {
     isDisabled() {
       return true;
@@ -96,7 +90,7 @@ return this.$http.get(string);
 .md-card {
     width: 320px;
     margin: 20px;
-    height:520px;
+    height: 600px;
     display: inline-block;
     vertical-align: top;
   }

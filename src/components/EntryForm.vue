@@ -55,7 +55,7 @@ export default {
     submit() {
       this.$validator.validateAll().then((result) => {
         if (result) {
-          var form = new FormData();
+          const form = new FormData();
           form.append('title', this.title);
           if (this.$refs.uploader.files.length > 0) {
             form.append('filename', this.$refs.uploader.files[0].name);

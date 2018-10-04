@@ -1,5 +1,9 @@
 <template>
   <div>
+    <vue-headful
+            title="yeet"
+            description="yeet - stalkerspace reborn"
+    />
     <api-request :resource="req" v-model="res">
       <morphing-button/>
       <api-request :resource="timer_req" v-model="timer_response">
