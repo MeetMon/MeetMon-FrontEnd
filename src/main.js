@@ -2,7 +2,6 @@ import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueApiRequest from 'vue-api-request';
-import vueHeadful from 'vue-headful';
 import { MdButton, MdCard, MdField } from 'vue-material/dist/components';
 import 'vue-material/dist/vue-material.min.css';
 import 'vue-material/dist/theme/default.css';
@@ -18,7 +17,6 @@ Vue.use(VueApiRequest);
 Vue.use(MdButton);
 Vue.use(MdCard);
 Vue.use(MdField);
-Vue.component('vue-headful', vueHeadful);
 Vue.use(VueTransmit);
 Vue.use(VeeValidate);
 
